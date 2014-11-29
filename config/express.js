@@ -20,6 +20,10 @@ module.exports = function () {
 	app.use(bodyParser.json());
 	app.use(methodOverride());
 
+	// view engine setup by jade
+	app.set('views', './app/views');
+	app.set('view engine', 'jade');
+
 
 	require('../app/routes/index.server.routes.js')(app);
 	return app;
