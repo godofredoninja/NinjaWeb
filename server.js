@@ -1,11 +1,7 @@
-var express = require('express');
+var express = require('./config/express');
+
 var app = express();
-
-app.use('/', function (req, res) {
-	res.send('hola Mundo');
-});
-
 app.listen(3000);
+module.exports = app;
 
 console.log('servidor ejecutandose en => localhost:3000');
-module.exports = app;
