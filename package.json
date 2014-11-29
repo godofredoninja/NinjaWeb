@@ -1,21 +1,23 @@
 {
-	"name": "app-godweb",
-	"version": "0.0.1",
-	"description": "Desarrollo de mi Pagina en node",
-	"bugs": {
-		"url": "",
-		"email": "godofredo720@gmail.com"
-	},
-	"license": "MIT",
-	"author": {
-		"name": "GodoFredo",
-		"email": "godofredo720@gmail.com",
-		"url": "http://diswebgod.com"
-	},
-	"repository": {
-		"type": "git",
-		"url": ""
-	},
-	"dependencies": {},
-	"devDependencies": {}
+  "name": "app-godweb",
+  "version": "0.0.1",
+  "description": "Desarrollo de mi Pagina en node",
+  "bugs": {
+    "url": "",
+    "email": "godofredo720@gmail.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "GodoFredo",
+    "email": "godofredo720@gmail.com",
+    "url": "http://diswebgod.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "express": "^4.10.4"
+  },
+  "devDependencies": {}
 }
