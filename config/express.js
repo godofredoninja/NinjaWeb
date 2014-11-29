@@ -1,4 +1,6 @@
-var express			= require('express'),
+var config			= require('./config'),
+	session			= require('express-session'),
+	express			= require('express'),
 	morgan			= require('morgan'),
 	compress		= require('compression'),
 	bodyParser		= require('body-parser'),
@@ -19,6 +21,13 @@ module.exports = function () {
 
 	app.use(bodyParser.json());
 	app.use(methodOverride());
+
+	//session peticiones request
+	app.use(session({
+		saveUninitialized: true,
+		resave: true,
+		secret: config.sessionSecret
+	}));
 
 	// view engine setup by jade
 	app.set('views', './app/views');
