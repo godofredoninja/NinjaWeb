@@ -1,4 +1,26 @@
-header
-	h2 Hola esto es el Header
+header.Header
+	a(href="/", target="").Header-logoLink
+		h1.Header-logo
+			figure.Header-logoContent
+				img(src="images/logo.png", alt="GodoFredo Diseño y Desarrollo de Aplicaciones Web")
+
+	nav.MainMenu
+		ul.MainMenu-list
+			li.MainMenu-item
+				a(href="/", target="").MainMenu-link.icon-home Home
+			li.MainMenu-item
+				a(href="/godofredo", target="").MainMenu-link.icon-user Sobre Mi
+			li.MainMenu-item
+				a(href="/servicios", target="").MainMenu-link.icon-services Servicios
+			li.MainMenu-item
+				a(href="/procesos", target="").MainMenu-link.icon-proces Procesos
+			li.MainMenu-item
+				a(href="/portafolio", target="").MainMenu-link.icon-porfolio portafolio
+			li.MainMenu-item
+				a(href="/blog", target="").MainMenu-link.icon-blog Blog
+			li.MainMenu-item
+				a(href="/contancto", target="").MainMenu-link.icon-message Contacto
+
+	.Header-iconMobile.icon-menu
 
 

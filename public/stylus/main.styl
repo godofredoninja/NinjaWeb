@@ -1,0 +1,117 @@
+@import 'nib'
+@import 'nib/vendor'
+@import 'nib/gradients'
+
+@import 'icon'
+
+fontTitle = 'Denk One', sans-serif
+fontBody = 'Lato', sans-serif
+
+
+
+*
+	margin 0
+	padding 0
+
+a
+	text-decoration none
+	display block
+
+body
+	background #e7e7e7 url('/images/bg-Body.jpg') repeat
+	color #424242
+	font-family fontBody
+	font-size 1em
+	font-weight 300
+	line-height 1.5
+	text-align center
+	text-rendering optimizeLegibility
+
+figure
+	margin 0
+	padding 0
+
+img
+	max-width 100%
+	width auto
+
+p
+	margin 0 0 10px
+
+ul
+	list-style-type none
+	margin 0
+	padding 0
+
+
+textarea
+input[type=text]
+input[type=password]
+input[type=search]
+input[type=email]
+input[type=url]
+	background #fff
+	border 1px solid #AFAFAF
+	border-radius 4px
+	box-sizing border-box
+	font-size 1.2em
+	height 50px
+	line-height 1.2
+	padding 5px 15px 5px 35px
+	width 100%
+
+textarea
+	height 100px
+	padding-left 15px
+	resize none
+
+textarea
+input[type=text]
+input[type=password]
+input[type=search]
+input[type=email]
+input[type=url]
+	&:focus
+		border-color #8b8b8b
+		box-shadow 0 0 3px rgba(0,0,0,0.2)
+		color #444
+		outline none
+
+input[type=reset]
+input[type=submit]
+button
+.Btn
+	background #abcb4f
+	background-clip padding-box
+	background-image linear-gradient(to bottom,#adcc50,#8eb932)
+	border 1px solid #538301
+	border-radius 4px
+	box-shadow 0 1px 2px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.75)
+	box-sizing border-box
+	color #424242
+	cursor pointer
+	display inline-block
+	font-size 1.5em
+	font-weight 800
+	height auto
+	line-height 40px
+	outline none
+	padding 4px 14px
+	text-shadow 0 -1px 0 rgba(0,0,0,0.75)
+	text-shadow rgba(246,243,243,0.53) 1px 1px
+	width 100%
+
+	&:hover
+		background #8eb932
+
+	&:active
+		background #8eb932
+		box-shadow inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05)
+
+::selection
+	background #fba919
+	color #444
+	text-shadow 1px 1px #fff
+
+
+@import 'body'

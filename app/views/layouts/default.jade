@@ -6,10 +6,14 @@ html(lang="Es_es")
 
 		block title
 
+		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Denk+One|Lato:400,700,900,400italic,700italic")
+
 		//- bower:css
+		link(rel='stylesheet', href='/lib/normalize.css/normalize.css')
 		//- endbower
 
 		//- inject:css
+		link(rel="stylesheet", href="/css/main.css")
 		//- endinject
 
 	body
@@ -23,9 +27,11 @@ html(lang="Es_es")
 		include ../includes/footer
 
 		//- bower:js
+		script(src='/lib/jquery/dist/jquery.js')
 		//- endbower
 
 		//- inject:js
+		script(src="/scripts/main.js")
 		//- endinject
 
 		block Script
