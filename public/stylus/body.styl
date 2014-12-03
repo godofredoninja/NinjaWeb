@@ -1,26 +1,141 @@
+.moveLeft
+	transition transform 400ms ease
+	&.active
+		transform translate3d(-270px,0,0) scale3d(1,1,1)
+
+// Aside Header
+.AsideTop
+	background #051928
+	color #fff
+	padding .6em .5em .4em .5em
+	position relative
+
+	span
+		color ColorCoral
+		font-size 1.2em
+		font-weight bold
+		padding 0 .5em
+
+		&:before
+			color #fff
+			margin-right 5px
+
+
+// Fotter
+.Fotter
+	position relative
+
+// Header
 .Header
 	background #fff
-	box-sizing border-box
+	box-shadow  0px 1px 2px rgba(0,0,0,0.2)
+	height 73px
 	left 0
-	padding 1em .5em 1em .5em
-	position fixed
+	position relative
 	right 0
 	top 0
+	z-index 100
+
+	&-logoContent
+		background #fff
+		position relative
+		z-index 100
 
 	&-logoLink
+		box-sizing border-box
+		padding 1em 0 0 .5em
 		width 200px
 	&-logo
 		margin 0
 	&-iconMobile
+		cursor pointer
 		position absolute
-		top 0
+		right .5em
+		top 1em
+		&:before
+			font-size 2em
+
+
+
+
+
+// divider
+.Divider
+	position relative
+	width 100%
+
+	span
+		background #333
+		float left
+		height 5px
+		width 25%
+
+	.red
+		background ColorCoral
+	.blue
+		background ColorBlue
+	.green
+		background ColorGreen
+	.yellow
+		background #f2ee69
+
+	&.DividerMobile
+		left 0
+		position fixed
 		right 0
+		top 0
+		z-index 101
 
-
-
+// Menu
 .MainMenu
+	backface-visibility hidden
+	background #fff
+	botoom 0
+	box-sizing border-box
+	height 100%
+	overflow-x hidden
+	overflow-y auto
+	padding  .5em 0
+	position fixed
+	right 0
+	top 0
+	transform translate3d(100%,0,0)
+	transition transform 400ms ease
+	width 270px
+	z-index 2
+	&.active
+		transform translate3d(0px, 0px, 0px)
+	&-item
+		&:nth-child(2)>a:before
+			color ColorCoral
+		&:nth-child(3)>a:before
+			color ColorOrange
+		&:nth-child(4)>a:before
+			color ColorGreen
+		&:nth-child(5)>a:before
+			color ColorBlue
+		&:nth-child(6)>a:before
+			color ColorRed
+		&:nth-child(7)>a:before
+			color #748089
+
 	&-link
+		box-sizing border-box
+		color #696969
 		font-size 1.3em
-		color #424242
+		font-weight bold
+		padding 1em 1em 0 1em
 		text-align left
-		padding-top 1em
+		&:before
+			padding-right .5em
+			font-size 1.8em
+			color ColorCobal
+
+.wrapers
+	background #e7e7e7 url('/images/bg-Body.png') repeat
+	background-attachment fixed
+	position relative
+	z-index 99
+
+
+
