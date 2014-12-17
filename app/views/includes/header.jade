@@ -1,40 +1,53 @@
-.Divider.DividerMobile
-		span.red
-		span.blue
-		span.green
-		span.yellow
+.Divider
+	span.red
+	span.blue
+	span.green
+	span.yellow
 
-aside.AsideTop.moveLeft
-	.AsideTop.phone
-		span.icon-phone 985369135
-		span.icon-phone 01-7226418
+aside.AsideTop
+	.u-wrapper
+		.AsideTop.phone
+			span.icon-phone 985369135
+			span.icon-phone 01-7226418
 
 header.Header
+	.u-wrapper
 
-	.Content
-
-		.Header-logoContent.moveLeft
+		.Header-logo
 			a(href="/", target="").Header-logoLink
-				h1.Header-logo
-					figure.Header-imageContainer
-						img(src="images/logo.png", alt="GodoFredo Diseño y Desarrollo de Aplicaciones Web")
+				img(src="images/logo.png", alt="GodoFredo Diseño y Desarrollo de Aplicaciones Web").Header-logo
 
-			.Header-iconMobile.icon-menu
+		label.Header-iconMobile.icon-menu(for="MainMenu-callback")
+		input(type="checkbox")#MainMenu-callback.MainMenu-callback.u-inputNone
 
 		nav.MainMenu
 			ul.MainMenu-list
 				li.MainMenu-item
-					a(href="/", target="").MainMenu-link.icon-home Home
+					a(href="/", target="").MainMenu-link
+						i.icon-home
+						span Home
 				li.MainMenu-item
-					a(href="/godofredo", target="").MainMenu-link.icon-user Sobre Mi
+					a(href="/godofredo", target="").MainMenu-link
+						i.icon-user
+						span Sobre Mi
 				li.MainMenu-item
-					a(href="/servicios", target="").MainMenu-link.icon-services Servicios
+					a(href="/servicios", target="").MainMenu-link
+						i.icon-services
+						span Servicios
 				li.MainMenu-item
-					a(href="/procesos", target="").MainMenu-link.icon-proces Procesos
+					a(href="/procesos", target="").MainMenu-link
+						i.icon-proces
+						span Procesos
 				li.MainMenu-item
-					a(href="/portafolio", target="").MainMenu-link.icon-porfolio portafolio
+					a(href="/portafolio", target="").MainMenu-link
+						i.icon-porfolio
+						span portafolio
 				li.MainMenu-item
-					a(href="/blog", target="").MainMenu-link.icon-blog Blog
+					a(href="/blog", target="").MainMenu-link
+						i.icon-blog
+						span Blog
 				li.MainMenu-item
-					a(href="/contancto", target="").MainMenu-link.icon-message Contacto
+					a(href="/contancto", target="").MainMenu-link
+						i.icon-message
+						span Contacto
 

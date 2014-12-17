@@ -5,7 +5,7 @@ exports.render = function (req, res) {
 
 	req.session.lastVisit = new Date();
 
-	res.render('pages/home',{
+	res.render('pages/aboutme',{
 		title : "hola mundo"
 	})
 
