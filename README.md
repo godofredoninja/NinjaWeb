@@ -1,7 +1,6 @@
-Inicio de mi Aplicación WEB 
+# GodoFredo.Ninja
 
-Estructura de mi Aplicacion 
----------------------------
+## Structure
 
 ```
 ├───app
@@ -26,4 +25,24 @@ Estructura de mi Aplicacion
     │   ├───services
     │   └───views
     └───stylus
+```
+
+## Usage
+
+### Install global
+```
+$ npm install -g stylus
+$ npm install -g gulp
+$ npm install -g bower
+```
+
+### Install local
+```
+$ npm install
+$ bower install
+```
+### Development mode
+```
+$ node server
+$ gulp
 ```
