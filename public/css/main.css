@@ -200,6 +200,7 @@
 a {
   text-decoration: none;
   display: block;
+  color: #1378ae;
 }
 body {
   color: #424242;
@@ -320,6 +321,9 @@ button:active,
   background-position: 50% 0;
   position: relative;
   color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 .Aboutme-bg {
   background: rgba(0,0,0,0.66);
@@ -372,6 +376,20 @@ button:active,
 .Biography {
   position: relative;
 }
+.Biography a {
+  display: inline;
+  font-weight: bold;
+}
+.Biography a:hover {
+  border-bottom: 1px solid #1378ae;
+}
+.Biography-image {
+  display: block;
+  max-width: 180px;
+  margin: 5px auto 20px auto;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
 .Biography-description {
   padding-top: 30px;
 }
@@ -389,6 +407,41 @@ button:active,
 }
 .Fotter {
   position: relative;
+  background: #051928;
+  color: #fff;
+  display: block;
+  padding: 1em 0;
+}
+.Fotter-social {
+  padding: 1em 0 1em 0;
+}
+.Fotter-socialLink {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 2.5em;
+  margin-right: 10px;
+}
+.Fotter-socialLink:last-of-type {
+  margin-right: 0;
+}
+.Fotter .icon-facebook {
+  color: #3b5998;
+}
+.Fotter .icon-twitter {
+  color: #55acee;
+}
+.Fotter .icon-youtube {
+  color: #e52d27;
+}
+.Fotter .icon-google {
+  color: #c05545;
+}
+.Fotter .icon-github {
+  color: #727272;
+}
+.Fotter-copyright {
+  font-size: 0.9em;
+  margin: 0 auto;
 }
 .Header {
   background: #fff;
@@ -553,4 +606,69 @@ button:active,
   background-attachment: fixed;
   position: relative;
   z-index: 99;
+}
+.Services {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background: url("/images/bg-Services.jpg") no-repeat;
+  background-position: 50% 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.Skills-items {
+  background: #fff;
+  border-bottom: 2px solid #ddd;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  margin-bottom: 2em;
+  padding: 0.4em 0.4em 1em 0.4em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.Skills-items.two h3 {
+  background: #1378ae;
+}
+.Skills-items.two li:before {
+  color: #1378ae;
+}
+.Skills-items.three h3 {
+  background: #fba919;
+}
+.Skills-items.three li:before {
+  color: #fba919;
+}
+.Skills-items.four h3 {
+  background: #20c05c;
+}
+.Skills-items.four li:before {
+  color: #20c05c;
+}
+.Skills-titleItem {
+  background: #f04f53;
+  color: #fff;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  margin: -0.4em -0.4em 0.4em;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+.Skills-conten {
+  text-align: left;
+  padding: 0.7em 0;
+  font-style: italic;
+  font-weight: bold;
+}
+.Skills-list {
+  position: relative;
+  padding-left: 20px;
+}
+.Skills-list:before {
+  position: absolute;
+  left: 0px;
+  line-height: 1.6em;
+  color: #f04f53;
 }

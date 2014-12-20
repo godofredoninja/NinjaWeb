@@ -5,8 +5,8 @@ exports.render = function (req, res) {
 
 	req.session.lastVisit = new Date();
 
-	res.render('pages/aboutme',{
-		title : "hola mundo"
+	res.render('contact',{
+		// title : "hola mundo"
 	})
 
 

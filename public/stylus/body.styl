@@ -4,6 +4,7 @@
 	background-position 50% 0
 	position relative
 	color #fff
+	background-size cover
 	&-bg
 		background rgba(0,0,0,0.66)
 		height 100%
@@ -52,6 +53,20 @@
 // Biography
 .Biography
 	position relative
+
+	a
+		display inline
+		font-weight bold
+
+		&:hover
+			border-bottom 1px solid ColorBlue
+	&-image
+		display block
+		max-width 180px
+		margin 5px auto 20px auto
+		border-radius 50%
+
+
 	&-description
 		padding-top 30px
 	&-title
@@ -70,6 +85,37 @@
 // Fotter
 .Fotter
 	position relative
+	background #051928
+	color #fff
+	display block
+	padding 1em 0
+
+	&-social
+		padding 1em 0 1em 0
+
+	&-socialLink
+		display inline-block
+		vertical-align top
+		font-size 2.5em
+		margin-right 10px
+		&:last-of-type
+			margin-right 0
+
+	.icon-facebook
+		color #3b5998
+	.icon-twitter
+		color #55acee
+	.icon-youtube
+		color #e52d27
+	.icon-google
+		color #c05545
+	.icon-github
+		color #727272
+
+	&-copyright
+		font-size .9em
+		margin 0 auto
+
 
 
 // Header
@@ -213,4 +259,64 @@
 	z-index 99
 
 
+// Services
+.Services
+	height 500px
+	width 100%
+	position relative
+	background url('/images/bg-Services.jpg') no-repeat
+	background-position 50% 0
+	background-size cover
+
+
+
+// Skills - Habilidades
+
+.Skills
+	&-items
+		background #fff
+		border-bottom 2px solid #DDDDDD
+		border-radius 3px
+		display block
+		margin-bottom 2em
+		padding .4em .4em 1em .4em
+		box-sizing border-box
+		&.two
+			h3
+				background ColorBlue
+			li:before
+				color ColorBlue
+		&.three
+			h3
+				background ColorOrange
+			li:before
+				color ColorOrange
+		&.four
+			h3
+				background ColorGreen
+			li:before
+				color ColorGreen
+
+
+	&-titleItem
+		background ColorCoral
+		color #fff
+		border-radius 3px 3px 0 0
+		margin -0.4em -0.4em 0.4em
+		line-height 2em
+		text-transform uppercase
+
+	&-conten
+		text-align left
+		padding .7em 0
+		font-style italic
+		font-weight bold
+	&-list
+		position relative
+		padding-left 20px
+		&:before
+			position absolute
+			left 0px
+			line-height 1.6em
+			color ColorCoral
 

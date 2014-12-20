@@ -30,7 +30,7 @@ module.exports = function () {
 	}));
 
 	// view engine setup by jade
-	app.set('views', './app/views');
+	app.set('views', './app/views/pages');
 	app.set('view engine', 'jade');
 
 	require('../app/routes/index.server.routes.js')(app);
