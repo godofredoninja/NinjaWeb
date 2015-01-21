@@ -1,0 +1,40 @@
+//- Divider
+mixin Divider
+    .Divider
+        span.red
+        span.blue
+        span.green
+        span.yellow
+
+//- project-planner
+mixin Pp
+    .Pp
+        .Pp-cont
+            .u-wrapper
+                h2.Pp-title Vamos a hacer algo grande juntos
+                p.Pp-des No dude en ponerse en contacto conmigo para el trabajo, o simplemente estar en contacto enviándome un correo electrónico.
+
+                a.Pp-b.Btn(href="/contacto", target="") Iniciar un Proyecto
+                span.Pp-background
+                    .Pp-background-left
+                    .Pp-background-right
+//-Header Home h1
+mixin HomeH
+    a(href="/", target="").Header-logoLink
+        img.Header-logoImagen(src="/images/logo.png", alt="GodoFredo Diseño y Desarrollo de Aplicaciones Web")
+
+//- Service content items
+mixin Services(image, imageAtl, title, des, clas)
+    article.Services-item
+        div.Services-graphic
+            div.Services-graphic-fist
+                div.Services-graphic-Inner
+                    figure.Services-graphic-imageConten
+                        if (clas === undefined)
+                            img(class="Services-graphic-image" src="/images/Service-icon-#{image}", alt="#{imageAtl}")
+                        else
+                            img(class="Services-graphic-image #{clas}" src="/images/Service-icon-#{image}", alt="#{imageAtl}")
+        h3.Services-item-title #{title}
+        p.Services-item-desc #{des}
+
+

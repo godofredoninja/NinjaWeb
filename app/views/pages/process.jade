@@ -1,8 +1,21 @@
 extends ../layouts/default
 
 block title
-	title= title
+    title= title
+block menuLink
+    -var selectedMenu = 'Procesos';
 
 block content
-	h1= title
-	h2 Page Home
+
+    .Portfolio.u-Height
+        .u-wrapper
+            .Portfolio-cont.u-alignCenter
+                h1.Portfolio-title Proceso para el desarrollo web muy Pronto :)
+                p Estoy trabajando muy duro en esta sección de nuestro sitio.  Manténganse al tanto!
+
+                .Timer
+
+    //- Include mixin project-planner
+    +Pp
+
+

@@ -1,53 +1,44 @@
-.Divider
-	span.red
-	span.blue
-	span.green
-	span.yellow
+//- variable
+-var menu = {'Home': ['/','home'], 'Sobre Mi': ['/godofredo', 'user'], 'Servicios': ['/servicios','services'],'Procesos':['/procesos','proces'],'Portafolio':['portafolio','porfolio'],'Blog':['//blog.godofredo.ninja','blog'],'Contact': ['contacto','message'] };
+
+.Divider.Head-divider
+    span.red
+    span.blue
+    span.green
+    span.yellow
 
 aside.AsideTop
-	.u-wrapper
-		.AsideTop.phone
-			span.icon-phone 985369135
-			span.icon-phone 01-7226418
-
+    .u-wrapper
+        ul.AsideTop-social
+            li.AsideTop-socialItem.Twitter
+                a.twitter-follow-button(href='https://twitter.com/GodoFredoNinja') Follow @GodoFredoNinja
+            li.AsideTop-socialItem.Facebook
+                .fb-like(data-href='https://www.facebook.com/godofredo.ninja', data-layout='button_count', data-action='like', data-show-faces='false', data-share='false')
+        .AsideTop-phone
+            span.icon-mobile 985369135
+            span.icon-phone 01 7226418
 header.Header
-	.u-wrapper
+    .u-wrapper
 
-		.Header-logo
-			a(href="/", target="").Header-logoLink
-				img(src="/images/logo.png", alt="GodoFredo Diseño y Desarrollo de Aplicaciones Web").Header-logo
+        if selectedMenu === "Home"
+            h1.Header-logo
+                //- Mixin Home H1
+                +HomeH
+        else
+            .Header-logo
+                +HomeH
 
-		label.Header-iconMobile.icon-menu(for="MainMenu-callback")
-		input(type="checkbox")#MainMenu-callback.MainMenu-callback.u-inputNone
-
-		nav.MainMenu
-			ul.MainMenu-list
-				li.MainMenu-item
-					a(href="/", target="").MainMenu-link
-						i.icon-home
-						span Home
-				li.MainMenu-item
-					a(href="/godofredo", target="").MainMenu-link
-						i.icon-user
-						span Sobre Mi
-				li.MainMenu-item
-					a(href="/servicios", target="").MainMenu-link
-						i.icon-services
-						span Servicios
-				li.MainMenu-item
-					a(href="/procesos", target="").MainMenu-link
-						i.icon-proces
-						span Procesos
-				li.MainMenu-item
-					a(href="/portafolio", target="").MainMenu-link
-						i.icon-porfolio
-						span portafolio
-				li.MainMenu-item
-					a(href="#", target="").MainMenu-link
-						i.icon-blog
-						span Blog
-				li.MainMenu-item
-					a(href="/contacto", target="").MainMenu-link
-						i.icon-message
-						span Contacto
-
+        label.Header-iconMobile.icon-menu(for="MainMenu-callback")
+        input(type="checkbox")#MainMenu-callback.MainMenu-callback.u-inputNone
+        nav.MainMenu
+            ul.MainMenu-list
+                each data, name in menu
+                    li.MainMenu-item
+                        if selectedMenu === name
+                            a(href=data[0], class="MainMenu-link active")
+                                i(class="icon-#{data[1]}")
+                                span= name
+                        else
+                            a(href=data[0], class="MainMenu-link")
+                                i(class="icon-#{data[1]}")
+                                span= name

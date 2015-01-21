@@ -1,156 +1,277 @@
 // Aboutme
 .Aboutme
-	background url('/images/bg-Aboutme.jpg') no-repeat
-	background-position 50% 0
-	position relative
-	color #fff
-	background-size cover
-	&-bg
-		background rgba(0,0,0,0.66)
-		height 100%
-		width 100%
-	&-cont
-		padding-top 2.5em
-	&-name
-		display block
-		font-size 1.5em
-		font-family fontTitle
-	&-description
-		display block
-		font-size .8em
-		font-family fontBody
-	&-img
-		background url('/images/avatar.jpg')
-		background-size cover
-		box-shadow inset 0 0 0 0 rgba(200,95,66,0.4),inset 0 0 0 16px rgba(255,255,255,0.6),0 1px 2px rgba(0,0,0,0.1)
-		position relative
-		margin 0 auto
-		width 200px
-		height 200px
-		border-radius 50%
-
-
+    background url('/images/bg-Aboutme.jpg') no-repeat
+    background-position 50% 0
+    background-size cover
+    color #fff
+    position relative
+    transition height 0.5s ease-out 0s
+    &-bg
+        background rgba(0,0,0,0.66)
+        height 100%
+        width 100%
+    &-cont
+        padding-top 2.5em
+    &-name
+        display block
+        font-family fontTitle
+        font-size 1.5em
+        font-size 1.8em
+        font-weight normal
+    &-description
+        display block
+        font-family fontBody
+        font-size .8em
+    &-img
+        background url('/images/avatar.jpg')
+        background-size cover
+        border-radius 50%
+        box-shadow inset 0 0 0 0 rgba(200,95,66,0.4),inset 0 0 0 16px rgba(255,255,255,0.6),0 1px 2px rgba(0,0,0,0.1)
+        height 200px
+        margin 0 auto
+        position relative
+        width 200px
+        transform translateZ(0)
+        &:hover
+            animation-name buzz-out
+            animation-duration .75s
+            animation-timing-function linear
+            animation-iteration-count 1
 
 
 // Aside Header
 .AsideTop
-	background #051928
-	color #fff
-	padding .6em 0 .4em 0
-	position relative
+    background #051928
+    color #fff
+    padding .6em 0 .4em 0
+    position relative
+    z-index 100
 
-	span
-		color ColorCoral
-		font-size 1.2em
-		font-weight bold
-		padding 0 .5em
+    &-social
+        display none
 
-		&:before
-			color #fff
-			margin-right 5px
+    span
+        color ColorCoral
+        font-size 1.2em
+        font-weight bold
+        padding 0 .5em
+
+        &:before
+            color #fff
+            margin-right 5px
 
 
 // Biography
 .Biography
-	position relative
+    position relative
 
-	a
-		display inline
-		font-weight bold
+    a
+        display inline
+        font-weight bold
 
-		&:hover
-			border-bottom 1px solid ColorBlue
-	&-image
-		display block
-		max-width 180px
-		margin 5px auto 20px auto
-		border-radius 50%
+        &:hover
+            border-bottom 1px solid ColorBlue
+    &-image
+        border 10px solid #fff
+        border-radius 50%
+        box-shadow 1px 5px 1px rgba(204,204,204,.8)
+        box-sizing border-box
+        display block
+        margin 5px auto 20px auto
+        max-width 250px
 
 
-	&-description
-		padding-top 30px
-	&-title
-		color ColorCoral
-		font-size 2.3em
-		letter-spacing -1px
-		text-transform uppercase
-		padding-bottom .5em
-	&-info
-		text-align left
-		font-style italic
-		font-size 1.2em
+    &-description
+        padding-top 30px
+    &-title
+        color ColorCoral
+        font-size 2.3em
+        letter-spacing -1px
+        padding-bottom .5em
+        text-transform uppercase
+    &-info
+        font-size 1.2em
+        font-style italic
+        text-align left
 
+// contact
+.Contact
+
+    &-head
+        padding 3em 0 2em 0
+    &-titleSub
+        color #000
+        font-size 1em
+    &-title
+        color ColorCoral
+        font-weight 800
+        letter-spacing -1px
+        line-height 1.2
+        margin 0
+        padding-top .2em
+    hr
+        border none
+        border-bottom 1px dashed #b7b7b7
+        margin 20px auto
+        padding 0
+        width 80%
+
+    &-form
+        background #fff
+        box-shadow 1px 5px 1px rgba(204,204,204,0.8)
+        box-sizing border-box
+        margin-bottom 4em
+        padding 2em .5em 3em .5em
+    &-formTitle
+        color ColorBlue
+        font-weight 800
+        padding-bottom 1em
+        text-transform uppercase
+
+    p
+        color #000
+        font-weight bold
+        opacity .9
+
+    &-formInfo
+        p:before
+            margin-right 5px
+
+    &-social
+        a
+            font-size 1.5em
+            margin-right .2em
+            padding 5px
+            &:last-of-type
+                margin-right 0
+
+// Form
+.Form
+    background #fff
+    &-itemsList
+        position relative
+        &:before
+            color #afafaf
+            font-size 1.3em
+            left 8px
+            position absolute
+            top 14px
+
+        .active
+            box-shadow 0px 0px 0px 2px ColorCoral
+
+
+    &-message
+        background #F8F6C9
+        border-radius 2px
+        font-size 1.2em
+        height 0
+        margin 0 auto 20px auto
+        overflow hidden
+        transition all 0.2s ease-in-out
+        &.active
+            border 2px solid #EEEA92
+            height auto
+            padding 10px 20px
 
 
 // Fotter
-.Fotter
-	position relative
-	background #051928
-	color #fff
-	display block
-	padding 1em 0
+.Footer
+    background #051928
+    color #fff
+    display block
+    padding 1.5em 0 .5em 0
+    position relative
 
-	&-social
-		padding 1em 0 1em 0
+    h3
+        font-size 1.5em
+        font-weight 900
+        text-transform uppercase
 
-	&-socialLink
-		display inline-block
-		vertical-align top
-		font-size 2.5em
-		margin-right 10px
-		&:last-of-type
-			margin-right 0
+    &-social
+        padding 1em 0 1em 0
 
-	.icon-facebook
-		color #3b5998
-	.icon-twitter
-		color #55acee
-	.icon-youtube
-		color #e52d27
-	.icon-google
-		color #c05545
-	.icon-github
-		color #727272
+    &-socialLink
+        font-size 2em
+        margin-right 10px
+        padding 8px
 
-	&-copyright
-		font-size .9em
-		margin 0 auto
-
+    &-copyright
+        font-size .9em
+        margin 0 auto
 
 
 // Header
 .Header
-	background #fff
-	left 0
-	position relative
-	right 0
-	top 0
-	z-index 100
-	&-logo
-		position relative
-		padding-bottom .2em
-	&-logoLink
-		box-sizing border-box
-		padding .7em 0 0 .5em
-		width 200px
-	&-iconMobile
-		cursor pointer
-		position absolute
-		right .5em
-		top .5em
-		z-index 9999
-		color #fff
-		background ColorCoral
-		width 50px
-		height 50px
-		border-radius 50%
-		line-height 60px
-		box-shadow  0px 1px 2px rgba(0, 0, 0, 0.2)
-		border 1px solid #fff
-		&:before
-			font-size 1.6em
-	.u-wrapper
-		padding 0
+    background #fff
+    left 0
+    position relative
+    right 0
+    top 0
+    z-index 100
+    &-logo
+        padding-bottom .2em
+        position relative
+        margin 0
+        font-size 1em
+    &-logoLink
+        box-sizing border-box
+        padding .7em 0 0 .5em
+        width 200px
+    &-logoImagen
+        transition all 0.5s ease-in-out
+    &-iconMobile
+        background ColorCoral
+        border 1px solid #fff
+        border-radius 50%
+        box-shadow  0px 1px 2px rgba(0, 0, 0, 0.2)
+        color #fff
+        cursor pointer
+        height 50px
+        line-height 60px
+        position absolute
+        right .5em
+        top .5em
+        width 50px
+        z-index 9999
+        &:before
+            font-size 1.6em
+    .u-wrapper
+        padding 0
+
+// Home
+.Home
+    background rgba(0, 0, 0, 0.22)
+    bottom 0
+    height auto
+    min-height 100%
+    min-width 100%
+    position fixed
+    width auto
+
+    &-video
+        bottom 0
+        height auto
+        min-height 100%
+        min-width 100%
+        overflow hidden
+        position fixed
+        right 0
+        width auto
+    &-content
+        bottom 5px
+        left 5%
+        position absolute
+    &-des
+        color #fff
+        font-size 1.2em
+        font-weight 800
+        text-align left
+
+
+        span
+            display block
+
 
 
 
@@ -158,165 +279,359 @@
 
 // divider
 .Divider
-	position relative
-	width 100%
-	display block
-	height 5px
+    display block
+    height 5px
+    position relative
+    width 100%
 
-	span
-		background #333
-		float left
-		height 5px
-		width 25%
+    span
+        background #333
+        float left
+        height 5px
+        width 25%
 
-	.red
-		background ColorCoral
-	.blue
-		background ColorBlue
-	.green
-		background ColorGreen
-	.yellow
-		background #f2ee69
+    .red
+        background ColorCoral
+    .blue
+        background ColorBlue
+    .green
+        background ColorGreen
+    .yellow
+        background #f2ee69
 
 
 // Menu
-
-
 .MainMenu
-	backface-visibility hidden
-	background #fff
-	box-shadow  0px 1px 2px rgba(0,0,0,0.2)
-	box-sizing border-box
-	height 0
-	overflow hidden
-	position relative
-	right 0
-	transition height 0.5s ease-out 0s
-	width 100%
-	z-index 100
-	border-top 1px solid #DBDBDB
+    backface-visibility hidden
+    background #fff
+    box-shadow  1px -5px 1px rgba(204,204,204,0.8)
+    box-sizing border-box
+    height 0
+    overflow hidden
+    position relative
+    right 0
+    transition height 0.5s ease-out 0s
+    width 100%
+    z-index 100
 
-	&-callback
-		&:checked
-			& ~ .MainMenu
-				height 100px
-	&-list
-		overflow-x scroll
-		padding-bottom 10px
-		padding-top 10px
-		white-space nowrap
-		width 100%
 
-	&-item
-		color #696969
-		display inline-block
-		font-size 15px
-		opacity .9
-		padding 0 5px 0 5px
-		position relative
-		width 75px
+    &-callback
+        &:checked
+            & ~ .MainMenu
+                height 100px
+    &-list
+        overflow-x scroll
+        padding-bottom 10px
+        padding-top 10px
+        white-space nowrap
+        width 100%
 
-	&-link
-		box-sizing border-box
-		color blue
-		display block
-		font-weight bold
-		height 90px
-		position relative
+    &-item
+        color #696969
+        display inline-block
+        font-size 15px
+        opacity .9
+        padding 0 5px 0 5px
+        position relative
+        width 75px
 
-		span
-			color #696969
-			opacity .9
-			position relative
+    &-link
+        box-sizing border-box
+        color blue
+        display block
+        font-weight bold
+        height 90px
+        position relative
 
-		i
-			color ColorCoral
-			display block
-			font-size 1.5em
-			line-height 40px
-			&:before
-				font-size 1.6em
+        span
+            color #696969
+            opacity .9
+            position relative
 
-		.icon-home
-			color #444
-		.icon-user
-			color ColorGreen
-		.icon-services
-			color ColorCoral
-		.icon-proces
-			color ColorOrange
-		.icon-porfolio
-			color ColorBlue
-		.icon-blog
-			color #945DA5
-		.icon-message
-			color #748089
+        i
+            color ColorCoral
+            display block
+            font-size 1.5em
+            line-height 40px
+            &:before
+                font-size 1.6em
+
+        .icon-home
+            color #444
+        .icon-user
+            color ColorGreen
+        .icon-services
+            color ColorCoral
+        .icon-proces
+            color ColorOrange
+        .icon-porfolio
+            color ColorBlue
+        .icon-blog
+            color #945DA5
+        .icon-message
+            color #748089
 
 .Landing
-	background #e7e7e7 url('/images/bg-Body.jpg') repeat
-	background-attachment fixed
-	position relative
-	z-index 99
+    background #e7e7e7 url('/images/bg-Body.jpg') repeat
+    background-attachment fixed
+    position relative
+    z-index 99
 
 
-// Services
-.Services
-	height 500px
-	width 100%
-	position relative
-	background url('/images/bg-Services.jpg') no-repeat
-	background-position 50% 0
-	background-size cover
+
+// portfolio
+.Timer
+    &-items
+        color #fff
+        display inline-block
+        vertical-align top
+        width 200px
+        height 200px
+        margin 0 auto
+        border-radius 50%
+        background #fff url('/images/bg-Servicesblue.jpg') repeat
+        box-shadow 1px 5px 1px rgba(204,204,204,.8)
+        border 15px solid #fff
+        transition all .3s ease
+        box-sizing border-box
+        margin-right .5em
+        margin-bottom .8em
+        overflow hidden
+        &:last-of-type
+            margin-right 0
+
+    &-conten
+        display table
+        height 170px
+        line-height 1
+        width 100%
+        position relative
+
+    &-des
+        display table-cell
+        vertical-align middle
+        max-width 170px
+    &-num
+        display block
+        font-size 4em
+        font-weight bold
+    &-le
+        display block
+        font-size 1.2em
+
+
 
 
 
 // Skills - Habilidades
 
 .Skills
-	&-items
-		background #fff
-		border-bottom 2px solid #DDDDDD
-		border-radius 3px
-		display block
-		margin-bottom 2em
-		padding .4em .4em 1em .4em
-		box-sizing border-box
-		&.two
-			h3
-				background ColorBlue
-			li:before
-				color ColorBlue
-		&.three
-			h3
-				background ColorOrange
-			li:before
-				color ColorOrange
-		&.four
-			h3
-				background ColorGreen
-			li:before
-				color ColorGreen
+    &-title
+        color ColorBlue
+        margin 1.5em auto
+        max-width 270px
+        position relative
+        text-transform uppercase
+        font-weight 900
+        font-size 2em
+
+    &-items
+        background #fff
+        border-bottom 2px solid #DDDDDD
+        border-radius 3px
+        display block
+        margin-bottom 2em
+        padding .4em .4em 1em .4em
+        box-sizing border-box
+        &.two
+            h3
+                background ColorBlue
+            li:before
+                color ColorBlue
+        &.three
+            h3
+                background ColorOrange
+            li:before
+                color ColorOrange
+        &.four
+            h3
+                background ColorGreen
+            li:before
+                color ColorGreen
 
 
-	&-titleItem
-		background ColorCoral
-		color #fff
-		border-radius 3px 3px 0 0
-		margin -0.4em -0.4em 0.4em
-		line-height 2em
-		text-transform uppercase
+    &-titleItem
+        background ColorCoral
+        color #fff
+        border-radius 3px 3px 0 0
+        margin -0.4em -0.4em 0.4em
+        line-height 2em
+        text-transform uppercase
 
-	&-conten
-		text-align left
-		padding .7em 0
-		font-style italic
-		font-weight bold
-	&-list
-		position relative
-		padding-left 20px
-		&:before
-			position absolute
-			left 0px
-			line-height 1.6em
-			color ColorCoral
+    &-conten
+        text-align left
+        padding .7em 0
+        font-style italic
+        font-weight bold
+    &-list
+        position relative
+        padding-left 20px
+        &:before
+            position absolute
+            left 0px
+            line-height 1.6em
+            color ColorCoral
 
+// Services
+.ServicesHome
+    height 500px
+    width 100%
+    position relative
+    background url('/images/bg-Services.jpg') no-repeat
+    background-position 50% 0
+    background-size cover
+    color #fff
+
+    &-cont
+        padding 1em 0
+
+    &-title
+        font-size 2.8em
+        font-family fontTitle
+    &-li
+        display block
+        margin-top 15px
+    &-img
+        background url('/images/bg-Services-top-icons.png') no-repeat
+        background-position 0 -140px
+        background-size 150px 210px
+        display block
+        height 70px
+        margin 0 auto
+        width 150px
+        &.tec
+            background-position 0 -70px
+        &.ser
+            background-position 0 0
+    &-des
+        font-size 1.2em
+        font-style italic
+        font-weight bold
+        padding-bottom 10px
+        padding-top 30px
+
+    .Services-bg
+        background rgba(0, 0, 0, 0.58)
+        position relative
+        height 100%
+
+
+.Services
+    padding-top 2em
+    &-title
+        color ColorCoral
+        text-transform uppercase
+        font-weight 800
+        margin 0 auto
+    &-conten
+        padding-top 1em
+    &-description
+        color #777
+        font-size 1.3em
+        font-style italic
+
+    &-item
+        margin-top 50px
+        max-width 500px
+        margin-left auto
+        margin-right auto
+        display block
+        width 100%
+        height auto
+        margin-bottom 20px
+        position relative
+        min-height 1px
+        box-sizing border-box
+
+        &-title
+            color #000
+            border-bottom 1px dashed #B7B7B7
+            padding-bottom 15px
+            margin 15px 0 15px 0
+            font-weight 600
+        &-desc
+            color #333
+
+    &-graphic
+        width 265px
+        height 265px
+        margin 0 auto
+        border-radius 50%
+        background #fff url('/images/bg-Servicesblue.jpg') repeat
+        box-shadow 1px 5px 1px rgba(204,204,204,.8)
+        border 20px solid #fff
+        transition all .3s ease
+        box-sizing border-box
+        overflow hidden
+        &:hover
+            transform translateY(-25px)
+        &-Inner
+            display table
+            height 240px
+            width 100%
+            position relative
+            bottom 5px
+        &-imageConten
+            display table-cell
+            vertical-align middle
+            max-width 200px
+        &-image
+            max-width 151px
+            &.__image
+                position relative
+                top 1px
+                width 101%
+                max-width 101%
+                left -1px
+
+// 404 error
+.ErrorPage
+    position relative
+    height 100%
+    &-content
+        padding 5em 0
+        font-family fontTitle
+        line-height 1
+        font-size 1em
+        text-align left
+    &-code
+        line-height 1.2
+        white-space pre
+
+// Pp project planner
+.Pp
+    background url('/images/bg-Pp01.png')
+    &-cont
+        background url('/images/bg-pp.png') center no-repeat
+        background-position center bottom 5%
+        background-size 320px
+        padding 3em 0 230px 0
+    &-title
+        color ColorBlue
+        font-weight 800
+        text-transform uppercase
+    &-des
+        color #696969
+        font-size 1.3em
+        font-weight bold
+        margin-top .5em
+        opacity .9
+
+    &-b
+        margin 2em auto 2em auto
+        max-width 320px
+        text-transform capitalize
+        z-index 10
+        position relative
+    &-background
+        display none

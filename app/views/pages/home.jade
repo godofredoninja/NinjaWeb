@@ -1,11 +1,28 @@
 extends ../layouts/default
 
 block title
-	title= title
+    title= title
+
+block menuLink
+    -var selectedMenu = 'Home';
 
 block content
-	h1= title
-	h2 Page Home
+    style(type='text/css').
+        .Footer{display: none;}
+        .Divider{display: none;}
+
+    video.Home-video(preload='auto', autoplay='true', loop='loop', muted='muted', volume='0', poster='/videos/video.jpg')
+        source(src='/videos/video.mp4', type='video/mp4')
+        source(src='/videos/video.ogv', type='video/ogg')
+        source(src='/videos/video.webm', type='video/webm')
+        img(src='/videos/video.jpg', alt='Video GodoFredo.ninja')
+
+    article.Home
+        .Home-content
+            .Home-des
+                span CREATIVIDAD EN CIRCULACIÓN
+                span CON LA TECNOLOGÍA
+                span DEL MAÑANA
 
 
 

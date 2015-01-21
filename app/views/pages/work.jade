@@ -2,12 +2,18 @@ extends ../layouts/default
 
 block title
 
-	title= title
+    title= title
+block menuLink
+    -var selectedMenu = 'Portafolio';
 
 block content
 
-	h1= title
+    .Portfolio.u-Height
+        .u-wrapper
+            .Portfolio-cont.u-alignCenter
+                h1.Portfolio-title Mi Portfolio muy Pronto :)
+                p Estoy trabajando muy duro en esta sección de nuestro sitio.  Manténganse al tanto!
 
-	h2 Page work
-
-block Script
+                .Timer
+    //- Include mixin project-planner
+    +Pp

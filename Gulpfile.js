@@ -25,7 +25,7 @@ gulp.task('css', function() {
 	gulp.src('./public/stylus/main.styl')
 	.pipe(stylus({
 		use: nib(),
-		compress: false }))
+		compress: true }))
 	.pipe(gulp.dest('./public/css/'))
 	.pipe(connect.reload());
 });

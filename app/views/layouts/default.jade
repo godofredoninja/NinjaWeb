@@ -1,50 +1,50 @@
 doctype html
 html(lang="Es_es")
-	head
-		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width , initial-scale=1 ,maximum-scale=1')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width , initial-scale=1 ,maximum-scale=1')
 
-		block title
+        include ../includes/mixin
 
-		//
-			/
-			 _____           _       ______           _              _       _
-			|  __ \         | |     |  ___|          | |            (_)     (_)
-			| |  \/ ___   __| | ___ | |_ _ __ ___  __| | ___   _ __  _ _ __  _  __ _
-			| | __ / _ \ / _` |/ _ \|  _| '__/ _ \/ _` |/ _ \ | '_ \| | '_ \| |/ _` |
-			| |_\ \ (_) | (_| | (_) | | | | |  __/ (_| | (_) || | | | | | | | | (_| |
-			 \____/\___/ \__,_|\___/\_| |_|  \___|\__,_|\___(_)_| |_|_|_| |_| |\__,_|
-			                                                               _/ |
-			                                                              |__/
+        block title
 
+        block menuLink
 
-		link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Denk+One|Lato:400,700,900,400italic,700italic")
+        link(href='//fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic|Boogaloo', rel='stylesheet', type='text/css')
+        link(rel="stylesheet",  href='http://fonts.googleapis.com/css?family=Handlee')
+        //- bower:css
+        link(rel='stylesheet', href='/lib/normalize.css/normalize.css')
+        //- endbower
 
-		//- bower:css
-		link(rel='stylesheet', href='/lib/normalize.css/normalize.css')
-		//- endbower
+        //- inject:css
+        link(rel="stylesheet", href="/css/main.css")
+        //- endinject
 
-		//- inject:css
-		link(rel="stylesheet", href="/css/main.css")
-		//- endinject
+    body
 
-	body
+        section.Landing
 
-		section.Landing
+            include ../includes/header
 
-			include ../includes/header
+            block content
 
-			block content
+            include ../includes/footer
 
-			include ../includes/footer
+        //- bower:js
+        script(src='/lib/jquery/dist/jquery.js')
+        script(src='/lib/typed.js/js/typed.js')
+        script(src='/lib/jquery.countdown/dist/jquery.countdown.min.js')
+        //- endbower
 
-		//- bower:js
-		script(src='/lib/jquery/dist/jquery.js')
-		//- endbower
+        //- inject:js
+        script(src="/scripts/contact.js")
+        script(src="/scripts/main.js")
+        //- endinject
 
-		//- inject:js
-		script(src="/scripts/main.js")
-		//- endinject
+        block Script
 
-		block Script
-
+        //- Social
+        #fb-root
+        script(src='//connect.facebook.net/en_US/all.js#xfbml=1')
+        //- script(src='//apis.google.com/js/plusone.js')
+        script(src='//platform.twitter.com/widgets.js')

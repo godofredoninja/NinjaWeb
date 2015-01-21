@@ -1,0 +1,177 @@
+@media screen and (min-width:768px)
+
+    //AsideTop
+    .AsideTop
+        overflow hidden
+        padding-top .8em
+        &-social
+            display block
+            float left
+            line-height 0
+            position relative
+            top 7px
+        .Facebook
+            width 100px
+        .Twitter
+            width 250px
+        &-socialItem
+            height 20px
+            float left
+        &-phone
+            float right
+        span
+            font-size 1.4em
+            font-weight 800
+
+    // Header
+    .Head-divider
+        position fixed
+        z-index 999
+    .Header
+        box-shadow 1px 5px 1px rgba(204,204,204,0.8)
+        overflow hidden
+        padding .5em 0
+        transition all .5s ease
+        &.active
+            position fixed
+            padding-top 1em
+        &-iconMobile
+            display none
+        &-logo
+            width auto
+            float left
+         &-logoLink
+             padding 0.7em 0px 0px 0
+             width 210px
+        .u-wrapper
+            padding 0px 15px
+
+    // home
+    .Home
+        &-content
+            bottom 5%
+        &-des
+            font-size 2.5em
+
+    // Biography
+    .Biography
+        &-image
+            float left
+            margin 0 .5em .1em 0
+    // Contact
+    .Contact
+        &-form
+            padding-left 20px
+            padding-right 20px
+        &-title
+            font-size 2.5em
+        p
+            font-size 1.3em
+        &-formTitle
+            text-align left
+            font-size 1.8em
+        &-formInfo
+            padding-top 1em
+            p
+                display inline
+                margin 0 20px 0 20px
+        &-social
+            padding 1em 0
+    // Form
+    .Form
+        overflow hidden
+        padding 5px
+        box-sizing border-box
+        &-colLeft
+            width 48%
+            float left
+        &-colRight
+            width 48%
+            float right
+        #Textare
+            height 185px
+            margin 0
+
+    // menu
+    .MainMenu
+        box-shadow none
+        float right
+        height auto !important
+        width 510px
+        &-list
+            padding 0
+            overflow-x hidden
+        &-link
+            height auto
+            border-bottom 3px solid transparent
+            &:hover
+            &.active
+                border-bottom 3px solid ColorCoral
+
+
+
+    //Skills
+    .Skills
+       &-items
+           width 47%
+           display inline-block
+           vertical-align top
+           margin-right 2em
+           height 220px
+           &:nth-child(even)
+               margin-right 0
+
+    // Services
+    .ServicesHome
+        &-li
+            display inline-block
+            vertical-align top
+            margin 0 4%
+        &-title
+            padding-bottom 1em
+            font-size 3.2em
+    .Services
+        &-item
+           width 265px
+           display inline-block
+           vertical-align top
+           margin 50px 15px 0 15px
+
+    // Pp project planner
+    .Pp
+        &-cont
+            background none
+            height 410px
+            padding-bottom 0
+        &-des
+            max-width 50%
+            margin 1em auto 0 auto
+        &-background
+            display block
+            position absolute
+            width 100%
+            height 100%
+            left 0
+            top 0
+            &-left
+            &-right
+                float left
+                width 50%
+                height 100%
+                background-size 100%
+                background-repeat no-repeat
+                background-position bottom
+            &-left
+                background-image url('/images/bg-Pp-left.png')
+            &-right
+                background-image url('/images/bg-Pp-right.png')
+                background-position bottom left 30px
+
+
+    .u-alignCenter
+        left 50%
+        padding 0
+        position absolute
+        top 50%
+        transform translate(-50%, -50%)
+        width 100%

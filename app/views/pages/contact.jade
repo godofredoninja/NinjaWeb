@@ -1,8 +1,59 @@
 extends ../layouts/default
 
 block title
-	title= title
+    title= title
+block menuLink
+    -var selectedMenu = 'Contact';
 
 block content
-	h1= title
-	h2 Page Home
+    section.Contact
+        .u-wrapper
+            article.Contact-head
+                h2.Contact-titleSub Póngase en Contacto con mi Persona
+                h1.Contact-title
+                    | ¿TIENES UN PROYECTO?
+                    br
+                    | ¿CÓMO PUEDO AYUDAR? ...
+                hr
+                p.
+                    Siempre estoy buscando nuevos retos y formas de explorar nuevos horizontes.
+                    Así que me encantaría saber de usted y contestar cualquier pregunta que tenga.
+
+            article.Contact-form
+                h2.Contact-formTitle Formule su Pregunta
+                form(id="Form", method="post").Form
+                    .Form-colLeft
+                        ul.Form-items
+
+                            li.Form-itemsList.icon-user
+                                input(type='text', id="name", name='name', placeholder='Nombre*')
+
+                            li.Form-itemsList.icon-message
+                                input(type='text', id="email", name='email', placeholder='Correo*')
+
+                            li.Form-itemsList.icon-phone
+                                input(type='text', id="phone", name='phone', placeholder='Telefono*')
+
+                            li.Form-itemsList.icon-porfolio
+                                input(type='text', id="company", name='company', placeholder='Empresa*')
+
+                    .Form-colRight
+                        textarea(id="Textare", name='message', placeholder='En pocas palabras nos dicen acerca de sus necesidades y/o problemas*')
+                        .Form-message
+
+                        button#BtnSend(type="submit") Enviar
+
+                .Contact-formInfo
+                    p.icon-mobile 985369135
+                    p.icon-phone 01 7226418
+                    p.icon-message hello@godofredo.ninja
+                    .Contact-social
+                        a(href="https://www.facebook.com/godofredo.ninja" target="_bank" ).u-socialLink.icon-facebook
+                        a(href="https://twitter.com/GodoFredoNinja" target="_bank").u-socialLink.icon-twitter
+                        a(href="" target="_bank").u-socialLink.icon-youtube
+                        a(href="" target="_bank").u-socialLink.icon-google
+                        a(href="https://github.com/godofredoninja" target="_bank").u-socialLink.icon-github
+
+
+
+

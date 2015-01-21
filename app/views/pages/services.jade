@@ -1,17 +1,101 @@
 extends ../layouts/default
 
 block title
-	title= Servicios
+    title= Servicios
+
+block menuLink
+    -var selectedMenu = 'Servicios';
 
 block content
 
-	.Services
-		.Services-bg
-			.u-wrapper
+    .ServicesHome.u-Height
+        .Services-bg
+            .u-wrapper
+                section.ServicesHome-cont.u-alignCenter
+                    .ServicesHome-title Diseño Desarrollo Producción
+                    ul.ServicesHome-ul
+                        li.ServicesHome-li
+                            i.ServicesHome-img
+                            span Producción
+                        li.ServicesHome-li
+                            i.ServicesHome-img.tec
+                            span Tecnología
+                        li.ServicesHome-li
+                            i.ServicesHome-img.ser
+                            span Rendimiento
+                    p.ServicesHome-des Diseño Hermoso, Funcional y sin Esfuerzo con un Propósito.
 
-	.Divider
-		span.red
-		span.blue
-		span.green
-		span.yellow
+                    a(href="#Services", target="GodoFredo Frontend").u-descendIcon.Scroll.icon-down
+    +Divider
 
+    section#Services.Services
+        h1.Services-title Servicios
+
+        div.Services-conten
+            .u-wrapper
+                article.Services-description
+                    p De una idea a una experiencia digital inolvidable y medible.
+                    p Se Desarrolla y diseña la interfaz de usuario para las aplicaciones móviles y web.
+                    p.
+                        Imagínese una publicidad 24 horas al día durante 365 días al año, donde pueda obtener nuevos clientes, ofrecer información acerca de sus productos y servicios, obteniendo información sobre las preferencias y gustos de sus clientes, impulsando su empresa hacia otros países y nuevos mercados. Más Publicidad, Más Ventas, Más clientes.
+        section.Services-row
+            .u-wrapper
+                section.Services-list
+                    +Services(
+                        'strategy.png',
+                        'Descubrimiento & Estrategia',
+                        'Descubrimiento & Estrategia',
+                        'Al crear una estrategia digital, se inicia una investigación de forma exhaustiva de su empresa, su entorno y clientes (potenciales). Al realizar la investigación me permite crear la mejor estrategia posible para que su empresa destaque en el mundo digital.'
+                    )
+                    +Services(
+                        'branding.png',
+                        'Branding Logotipos',
+                        'Branding',
+                        'Una marca fuerte, reconocible que cuenta una historia, refleja sus creencias y consigue su mensaje a sus clientes con claridad. Para ofrecerle la imagen perfecta, el valor de su marca es un componente vital para su éxito actual y futuro.'
+                    )
+                    +Services(
+                        'web.png',
+                        'Diseño Y Desarrollo Web',
+                        'Diseño Web & UX',
+                        'La investigación de usabilidad y la experiencia de Usuario web sirven para varios propósitos, el más importante de los cuales es para evaluar o medir la experiencia y los niveles generales de satisfacción de los usuarios.'
+                    )
+                    +Services(
+                        'responsive.png',
+                        'Diseño Responsive Web Adaptable',
+                        'Responsive Web Design',
+                        'Los tiempos han cambiado. Los usuarios que visitan sitios web en los teléfonos es cada vez mayor, por lo que se realiza que su sitio web encaje perfectamente en dispositivos móviles y tabletas como el iPhone y el iPad. Se Crea Responsive Web Design.'
+                    )
+                    +Services(
+                        'development.png',
+                        'Diseño y Desarrollo Web',
+                        'Desarrollo Web',
+                        'Se Construye su sitio web con el máximo cuidado y atención a los detalles por lo que es totalmente funcional para usted, sus clientes y los motores de búsqueda. Utilizo las últimas tecnologías como PHP(Laravel), Node.js, Python, Ruby, HTML5, CSS3, JavaScript.'
+                    )
+                    +Services(
+                        'seo.png',
+                        'Posicionamiento en los motores de busqueda',
+                        'Posicionamiento Web (SEO)',
+                        'Imagine que su página web este ubicada en los 10 primeros resultados según el producto o servicio que usted desea brindar. ¿Cómo puedo ubicar mi página en los primeros lugares? Ahí es donde se brinda el servicio, de aplicar el SEO Orgánico.'
+                    )
+                    +Services(
+                        'adwords.png',
+                        'campañas Adwords',
+                        'Google Adwords',
+                        'Se tiene el conocimiento y experiencia en creación y administración de campañas, grupos de anuncios y palabras clave así como técnicas de remarketing tanto en Red de Búsqueda (PPC) y Display (CPM). Avisos en YouTube y banners en sitios patrocinados por Google.',
+                        '__image'
+                    )
+                    +Services(
+                        'social.png',
+                        'Social Media Facebook Twitter Google',
+                        'Social Media',
+                        'Conseguir muchos fans, y que tu página "Sea Muy Querida" en Facebook, Twitter, YouTube es una estupenda manera de exponer continuamente las novedades de tus productos y servicios, y comunicarse con un público objetivo.'
+                    )
+                    +Services(
+                        'email.png',
+                        'Marketing por Correo',
+                        'Email Marketing',
+                        'En pocos segundos, se puede llegar a miles de clientes  existentes y nuevos mercados con información, promociones y ofertas para captar su interés. Por qué no darle una oportunidad marketing por correo electrónico.'
+                    )
+
+     //- Include mixin project-planner
+    +Pp
