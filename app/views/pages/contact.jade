@@ -1,7 +1,13 @@
 extends ../layouts/default
 
 block title
-    title= title
+    title Háblenos de sus ideas y de proyectos Vamos a hacer realidad sus idas.
+
+block DescriptionPage
+    meta(
+         name='description',
+         content='Si desea saber más sobre mí, envíame un correo electrónico, o llena el formulario de contacto. Llámame para poder tener una charla sobre su proyecto web.'
+    )
 block menuLink
     -var selectedMenu = 'Contact';
 
@@ -15,9 +21,7 @@ block content
                     br
                     | ¿CÓMO PUEDO AYUDAR? ...
                 hr
-                p.
-                    Siempre estoy buscando nuevos retos y formas de explorar nuevos horizontes.
-                    Así que me encantaría saber de usted y contestar cualquier pregunta que tenga.
+                p Siempre estoy buscando nuevos retos y formas de explorar nuevos horizontes. Así que me encantaría saber de usted y contestar cualquier pregunta que tenga.
 
             article.Contact-form
                 h2.Contact-formTitle Formule su Pregunta

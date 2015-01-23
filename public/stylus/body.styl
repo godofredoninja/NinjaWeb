@@ -30,13 +30,13 @@
         height 200px
         margin 0 auto
         position relative
-        width 200px
         transform translateZ(0)
+        width 200px
         &:hover
-            animation-name buzz-out
             animation-duration .75s
-            animation-timing-function linear
             animation-iteration-count 1
+            animation-name buzz-out
+            animation-timing-function linear
 
 
 // Aside Header
@@ -210,10 +210,10 @@
     top 0
     z-index 100
     &-logo
+        font-size 1em
+        margin 0
         padding-bottom .2em
         position relative
-        margin 0
-        font-size 1em
     &-logoLink
         box-sizing border-box
         padding .7em 0 0 .5em
@@ -496,8 +496,9 @@
         padding 1em 0
 
     &-title
-        font-size 2.8em
         font-family fontTitle
+        font-size 2.8em
+        font-weight normal
     &-li
         display block
         margin-top 15px
@@ -530,9 +531,10 @@
     padding-top 2em
     &-title
         color ColorCoral
-        text-transform uppercase
         font-weight 800
+        font-size 2em
         margin 0 auto
+        text-transform uppercase
     &-conten
         padding-top 1em
     &-description
@@ -541,68 +543,68 @@
         font-style italic
 
     &-item
-        margin-top 50px
-        max-width 500px
-        margin-left auto
-        margin-right auto
+        box-sizing border-box
         display block
-        width 100%
         height auto
         margin-bottom 20px
-        position relative
+        margin-left auto
+        margin-right auto
+        margin-top 50px
+        max-width 500px
         min-height 1px
-        box-sizing border-box
+        position relative
+        width 100%
 
         &-title
-            color #000
             border-bottom 1px dashed #B7B7B7
-            padding-bottom 15px
-            margin 15px 0 15px 0
+            color #000
             font-weight 600
+            margin 15px 0 15px 0
+            padding-bottom 15px
         &-desc
             color #333
 
     &-graphic
-        width 265px
+        background #fff url('/images/bg-Servicesblue.jpg') repeat
+        border 20px solid #fff
+        border-radius 50%
+        box-shadow 1px 5px 1px rgba(204,204,204,.8)
+        box-sizing border-box
         height 265px
         margin 0 auto
-        border-radius 50%
-        background #fff url('/images/bg-Servicesblue.jpg') repeat
-        box-shadow 1px 5px 1px rgba(204,204,204,.8)
-        border 20px solid #fff
-        transition all .3s ease
-        box-sizing border-box
         overflow hidden
+        transition all .3s ease
+        width 265px
         &:hover
             transform translateY(-25px)
         &-Inner
+            bottom 5px
             display table
             height 240px
-            width 100%
             position relative
-            bottom 5px
+            width 100%
         &-imageConten
             display table-cell
-            vertical-align middle
             max-width 200px
+            vertical-align middle
         &-image
             max-width 151px
             &.__image
+                left -1px
+                max-width 101%
                 position relative
                 top 1px
                 width 101%
-                max-width 101%
-                left -1px
 
 // 404 error
 .ErrorPage
     position relative
     height 100%
     &-content
-        padding 5em 0
         font-family fontTitle
-        line-height 1
         font-size 1em
+        line-height 1
+        padding 5em 0
         text-align left
     &-code
         line-height 1.2
@@ -630,8 +632,8 @@
     &-b
         margin 2em auto 2em auto
         max-width 320px
+        position relative
         text-transform capitalize
         z-index 10
-        position relative
     &-background
         display none

@@ -1,10 +1,16 @@
 extends ../layouts/default
 
 block title
-    title= title
+    title Diseño Web GodoFredo Desarrollo de Aplicaciones Web
 
+block DescriptionPage
+    meta(
+         name='description',
+         content='Hola soy GodoFredo, te ofrezco lo mejor en Diseño y desarrollo de aplicaciones web. Responsive Web Design, Usabilidad, SEO, Social Media, Email Marketing.'
+    )
 block menuLink
     -var selectedMenu = 'Home';
+
 
 block content
     style(type='text/css').

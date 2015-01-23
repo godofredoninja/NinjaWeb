@@ -6,7 +6,7 @@ var nodemailer = require('nodemailer');
 
 // Crear un nuevo método controller 'renderSendMessaje'
 
-exports.renderSendMessaje = function(req, res, next) {
+exports.renderSendMessage = function(req, res, next) {
 
     var data = {};
     data = JSON.stringify(req.body);

@@ -1,7 +1,13 @@
 extends ../layouts/default
 
 block title
-    title= Servicios
+    title Diseño Web, Responsive Web Design, Posicionamiento Web
+
+block DescriptionPage
+    meta(
+         name='description',
+         content='Me especializo en Diseño web Responsive, SEO, campañas de marketing en redes sociales y servicios de programación web y móvil. Contáctame!'
+    )
 
 block menuLink
     -var selectedMenu = 'Servicios';
@@ -12,7 +18,7 @@ block content
         .Services-bg
             .u-wrapper
                 section.ServicesHome-cont.u-alignCenter
-                    .ServicesHome-title Diseño Desarrollo Producción
+                    h1.ServicesHome-title Diseño Desarrollo Producción
                     ul.ServicesHome-ul
                         li.ServicesHome-li
                             i.ServicesHome-img
@@ -29,7 +35,7 @@ block content
     +Divider
 
     section#Services.Services
-        h1.Services-title Servicios
+        h2.Services-title Servicios
 
         div.Services-conten
             .u-wrapper

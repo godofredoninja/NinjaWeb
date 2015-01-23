@@ -1,7 +1,14 @@
 extends ../layouts/default
 
 block title
-    title= title
+    title Procesos para realizar un buen diseño web y funcional
+
+block DescriptionPage
+    meta(
+         name='description',
+         content='En este divertido recorrido te mostrare como se construye un buen diseño web. Ya sea una página corporativa o un proyecto web más complejo.'
+    )
+
 block menuLink
     -var selectedMenu = 'Procesos';
 

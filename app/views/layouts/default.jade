@@ -10,8 +10,35 @@ html(lang="Es_es")
 
         block menuLink
 
+        link(rel='icon', sizes='192x192', href='/icon.png')
+
+        block DescriptionPage
+
+        // og tags Facebook
+        meta(property='fb:admins', content='981122618569985')
+        meta(property='og:description', content='Hola soy GodoFredo, te ofrezco lo mejor en Diseño y desarrollo de aplicaciones web. Responsive Web Design, Posicionamiento Web (SEO), Social Media, Email Marketing, Google Adwords, Experiencia de usuario (UX).')
+        meta(property='og:title', content='GodoFredo.ninja: Diseño Desarrollo Aplicaciones Web.')
+        meta(property='og:type', content='website')
+        meta(property='og:url', content='https://godofredo.ninja')
+        meta(property='og:image', content='/social/social.png')
+        meta(property='og:site_name', content='godofredo.ninja')
+
+        // og tags Google+
+        meta(itemprop='description', content='Hola soy GodoFredo, te ofrezco lo mejor en Diseño y desarrollo de aplicaciones web. Responsive Web Design, Posicionamiento Web (SEO), Social Media, Email Marketing, Google Adwords, Experiencia de usuario (UX).')
+
+        // Twitter Cards
+        meta(property='twitter:account_id', content='114069455')
+        meta(name='twitter:card', content='summary_large_image')
+        meta(name='twitter:site', content='@GodoFredoNinja')
+        meta(name='twitter:title', content='GodoFredo.ninja: Diseño & Desarrollo de Aplicaciones Web.')
+        meta(name='twitter:description', content='Hola soy GodoFredo, te ofrezco lo mejor en Diseño y desarrollo de aplicaciones web. Responsive Web Design, Posicionamiento Web (SEO), Social Media, Email Marketing, Google Adwords, Experiencia de usuario (UX).')
+        meta(name='twitter:creator', content='@GodoFredoNinja')
+        meta(name='twitter:image:src', content='/social/social.png')
+        meta(name='twitter:domain', content='godofredo.ninja')
+
+        // Google Fonts
         link(href='//fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic|Boogaloo', rel='stylesheet', type='text/css')
-        link(rel="stylesheet",  href='http://fonts.googleapis.com/css?family=Handlee')
+
         //- bower:css
         link(rel='stylesheet', href='/lib/normalize.css/normalize.css')
         //- endbower

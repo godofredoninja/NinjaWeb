@@ -1,9 +1,15 @@
 extends ../layouts/default
 
 block title
-    title= title
+    title GodoFredo Freenlace Lima - Perú - Sobre Mi.
 block menuLink
     -var selectedMenu = 'Sobre Mi';
+
+block DescriptionPage
+    meta(
+         name='description',
+         content='He estado en el mercado desarrollando aplicaciones Web utilizando distintas tecnologías como: (PHP, Python, Node.js, JavaScript, Angular, HTML5, CSS3, etc.)'
+    )
 
 block content
     .Aboutme.u-Height
