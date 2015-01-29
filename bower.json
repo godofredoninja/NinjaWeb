@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Desarrollo de mi palicacion web",
   "dependencies": {
-    "normalize.css": "~3.0.2",
     "jquery": "~2.1.1",
     "typed.js": "*",
     "jquery.countdown": "~2.0.4"

@@ -14,7 +14,7 @@ html(lang="Es_es")
 
         block DescriptionPage
 
-        // og tags Facebook
+        //- og tags Facebook
         meta(property='fb:admins', content='981122618569985')
         meta(property='og:description', content='Hola soy GodoFredo, te ofrezco lo mejor en Diseño y desarrollo de aplicaciones web. Responsive Web Design, Posicionamiento Web (SEO), Social Media, Email Marketing, Google Adwords, Experiencia de usuario (UX).')
         meta(property='og:title', content='GodoFredo.ninja: Diseño Desarrollo Aplicaciones Web.')
@@ -23,10 +23,10 @@ html(lang="Es_es")
         meta(property='og:image', content='/social/social.png')
         meta(property='og:site_name', content='godofredo.ninja')
 
-        // og tags Google+
+        //- og tags Google+
         meta(itemprop='description', content='Hola soy GodoFredo, te ofrezco lo mejor en Diseño y desarrollo de aplicaciones web. Responsive Web Design, Posicionamiento Web (SEO), Social Media, Email Marketing, Google Adwords, Experiencia de usuario (UX).')
 
-        // Twitter Cards
+        //- Twitter Cards
         meta(property='twitter:account_id', content='114069455')
         meta(name='twitter:card', content='summary_large_image')
         meta(name='twitter:site', content='@GodoFredoNinja')
@@ -36,16 +36,11 @@ html(lang="Es_es")
         meta(name='twitter:image:src', content='/social/social.png')
         meta(name='twitter:domain', content='godofredo.ninja')
 
-        // Google Fonts
+        //- Google Fonts
         link(href='//fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic|Boogaloo', rel='stylesheet', type='text/css')
 
-        //- bower:css
-        link(rel='stylesheet', href='/lib/normalize.css/normalize.css')
-        //- endbower
-
-        //- inject:css
         link(rel="stylesheet", href="/css/main.css")
-        //- endinject
+
 
     body
 
@@ -57,21 +52,15 @@ html(lang="Es_es")
 
             include ../includes/footer
 
-        //- bower:js
-        script(src='/lib/jquery/dist/jquery.js')
-        script(src='/lib/typed.js/js/typed.js')
-        script(src='/lib/jquery.countdown/dist/jquery.countdown.min.js')
-        //- endbower
-
-        //- inject:js
-        script(src="/scripts/contact.js")
-        script(src="/scripts/main.js")
-        //- endinject
+        script(src="/js/lib.min.js")
+        script(src="/js/main.min.js")
 
         block Script
 
         //- Social
         #fb-root
-        script(src='//connect.facebook.net/en_US/all.js#xfbml=1')
+        script#facebook-jssdk(src='//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.0')
         //- script(src='//apis.google.com/js/plusone.js')
         script(src='//platform.twitter.com/widgets.js')
+
+

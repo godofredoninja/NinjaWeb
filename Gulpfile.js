@@ -8,9 +8,11 @@ var gulp				= require('gulp'),
 	jshint				= require('gulp-jshint'),
 	stylish				= require('jshint-stylish'),
 	inject				= require('gulp-inject'),
-	wiredep				= require('wiredep').stream;
+	wiredep				= require('wiredep').stream,
 
-// npm install --save-dev gulp gulp-connect gulp-stylus nib gulp-jshint jshint-stylish gulp-inject wiredep
+    // pro
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat');
 
 // Busca errores en el JS y nos los muestra por pantalla
 gulp.task('jshint', function() {
@@ -68,4 +70,27 @@ gulp.task('watch', function() {
 });
 
 
+// js main.min.js
+gulp.task('jsmin', function () {
+  gulp.src('./public/scripts/**/*.js')
+  .pipe(concat('main.min.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('./public/js/'))
+});
+// js lib.min.js
+gulp.task('libmin', function () {
+    var url = [
+        './public//lib/jquery/dist/jquery.js',
+        './public/lib/typed.js/js/typed.js',
+        './public/lib/jquery.countdown/dist/jquery.countdown.min.js'
+    ]
+    gulp.src(url)
+    .pipe(concat('lib.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./public/js/'))
+});
+
+
 gulp.task('default', ['bowerinject', 'inject', 'watch']);
+
+gulp.task('pro', ['jsmin','libmin']);

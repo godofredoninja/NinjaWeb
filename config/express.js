@@ -2,9 +2,9 @@
 'use strict';
 
 // Cargar las dependencias del módulo
-var config			= require('./config'),
-	session			= require('express-session'),
-	express			= require('express'),
+// var config          = require('./config');
+// var session          = require('express-session');
+var express			= require('express'),
 	morgan			= require('morgan'),
 	compress		= require('compression'),
 	bodyParser		= require('body-parser'),
@@ -19,7 +19,7 @@ module.exports = function () {
 	// Usar la variable 'NODE_ENV' para activar los middleware 'morgan' logger o 'compress'
 	if (process.env.NODE_ENV === 'development'){
 		app.use(morgan('dev'));
-	} else if (process.env.NODE_ENV === 'producction'){
+	} else if (process.env.NODE_ENV === 'production'){
 		app.use(compress());
 	}
 
@@ -32,11 +32,11 @@ module.exports = function () {
 	app.use(methodOverride());
 
 	// Configurar el middleware 'session'
-	app.use(session({
-		saveUninitialized: true,
-		resave: true,
-		secret: config.sessionSecret
-	}));
+	// app.use(session({
+	// 	saveUninitialized: true,
+	// 	resave: true,
+	// 	secret: config.sessionSecret
+	// }));
 
 	// Configurar el motor view de la aplicación y el directorio 'views'
 	app.set('views', './app/views/pages');

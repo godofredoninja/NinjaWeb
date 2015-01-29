@@ -27,7 +27,7 @@
     }
 
     // Countdown initializer work
-    $('.Timer').countdown('2015/02/10').on('update.countdown', function(event) {
+    $('.Timer').countdown('2015/02/30').on('update.countdown', function(event) {
         var $this = $(this).html(event.strftime(''
             + '<div class="Timer-items"><div class="Timer-conten"><div class="Timer-des"><span class="Timer-num">%D</span><span class="Timer-le">Dias</span></div></div></div>'
             + '<div class="Timer-items"><div class="Timer-conten"><div class="Timer-des"><span class="Timer-num">%H</span><span class="Timer-le">Horas</span></div></div></div>'
