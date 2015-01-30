@@ -80,9 +80,9 @@ gulp.task('jsmin', function () {
 // js lib.min.js
 gulp.task('libmin', function () {
     var url = [
-        './public//lib/jquery/dist/jquery.js',
+        // './public//lib/jquery/dist/jquery.js',
+        './public/lib/jquery.countdown/dist/jquery.countdown.min.js',
         './public/lib/typed.js/js/typed.js',
-        './public/lib/jquery.countdown/dist/jquery.countdown.min.js'
     ]
     gulp.src(url)
     .pipe(concat('lib.min.js'))

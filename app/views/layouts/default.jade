@@ -19,8 +19,8 @@ html(lang="Es_es")
         meta(property='og:description', content='Hola soy GodoFredo, te ofrezco lo mejor en Diseño y desarrollo de aplicaciones web. Responsive Web Design, Posicionamiento Web (SEO), Social Media, Email Marketing, Google Adwords, Experiencia de usuario (UX).')
         meta(property='og:title', content='GodoFredo.ninja: Diseño Desarrollo Aplicaciones Web.')
         meta(property='og:type', content='website')
-        meta(property='og:url', content='https://godofredo.ninja')
-        meta(property='og:image', content='/social/social.png')
+        meta(property='og:url', content='http://godofredo.ninja')
+        meta(property='og:image', content='htpp://godofredo.ninja/social/social.png')
         meta(property='og:site_name', content='godofredo.ninja')
 
         //- og tags Google+
@@ -33,7 +33,7 @@ html(lang="Es_es")
         meta(name='twitter:title', content='GodoFredo.ninja: Diseño & Desarrollo de Aplicaciones Web.')
         meta(name='twitter:description', content='Hola soy GodoFredo, te ofrezco lo mejor en Diseño y desarrollo de aplicaciones web. Responsive Web Design, Posicionamiento Web (SEO), Social Media, Email Marketing, Google Adwords, Experiencia de usuario (UX).')
         meta(name='twitter:creator', content='@GodoFredoNinja')
-        meta(name='twitter:image:src', content='/social/social.png')
+        meta(name='twitter:image:src', content='htpp://godofredo.ninja/social/social.png')
         meta(name='twitter:domain', content='godofredo.ninja')
 
         //- Google Fonts
@@ -52,6 +52,7 @@ html(lang="Es_es")
 
             include ../includes/footer
 
+        script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
         script(src="/js/lib.min.js")
         script(src="/js/main.min.js")
 
@@ -59,8 +60,10 @@ html(lang="Es_es")
 
         //- Social
         #fb-root
-        script#facebook-jssdk(src='//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.0')
+        script(src='https://platform.twitter.com/widgets.js')
         //- script(src='//apis.google.com/js/plusone.js')
-        script(src='//platform.twitter.com/widgets.js')
+        script#facebook-jssdk(src="//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.0")
+
+
 
 

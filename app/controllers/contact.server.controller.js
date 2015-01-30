@@ -10,14 +10,14 @@ exports.renderSendMessage = function(req, res, next) {
         service: "Mailgun",
         auth: {
             user: 'web@mg.godofredo.ninja',
-            pass: 'xxx'
+            pass: ''
         }
     });
 
     // setup e-mail data with unicode symbols
     var mailOptions = {
         from: req.body.name +'<web@mg.godofredo.ninja>', // sender address
-        to: 'hello@godofedo.ninja', // list of receivers
+        to: 'hello@godofredo.ninja', // list of receivers
         subject: 'Mail Ninja Web', // Subject line
         html: ''
         + '<p> Nombre: '+ req.body.name +'</p>'
