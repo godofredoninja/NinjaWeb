@@ -2,7 +2,7 @@
 'use strict';
 
 // Configurar la variable 'NODE_ENV'
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = process.env.NODE_ENV || 'production';
 
 // Cargar las dependencias de módulos
 var express = require('./config/express');

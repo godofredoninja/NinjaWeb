@@ -9,14 +9,14 @@ exports.renderSendMessage = function(req, res, next) {
     var transporter = nodemailer.createTransport({
         service: "Mailgun",
         auth: {
-            user: 'web@mg.godofredo.ninja',
-            pass: ''
+            user: 'postmaster@mg.godofredo.ninja',
+            pass: 'xxx'
         }
     });
 
     // setup e-mail data with unicode symbols
     var mailOptions = {
-        from: req.body.name +'<web@mg.godofredo.ninja>', // sender address
+        from: req.body.name +'<postmaster@mg.godofredo.ninja>', // sender address
         to: 'hello@godofredo.ninja', // list of receivers
         subject: 'Mail Ninja Web', // Subject line
         html: ''

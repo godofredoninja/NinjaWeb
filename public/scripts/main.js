@@ -27,7 +27,7 @@
     }
 
     // Countdown initializer work
-    $('.Timer').countdown('2015/02/30').on('update.countdown', function(event) {
+    $('.Timer').countdown('2015/03/15').on('update.countdown', function(event) {
         var $this = $(this).html(event.strftime(''
             + '<div class="Timer-items"><div class="Timer-conten"><div class="Timer-des"><span class="Timer-num">%D</span><span class="Timer-le">Dias</span></div></div></div>'
             + '<div class="Timer-items"><div class="Timer-conten"><div class="Timer-des"><span class="Timer-num">%H</span><span class="Timer-le">Horas</span></div></div></div>'
@@ -85,8 +85,8 @@ $(window).resize(resizeHeight);
 
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-59153920-1', 'auto');
